@@ -16,7 +16,21 @@ Company XYZ sells a software for $39. Since revenue has been flat for some time,
 Due to concerns that the test has been running for too long, a Bayesian A/B approach was taken to obtain meaningful results more quickly. Data was split based on price and the label conversion/no conversion was used.
 
 ## Results
-Pricing the software at $59 is associated with a lower conversion rate. This pattern becomes more evident following ~200 hits. A simulation of 100,000 samples shows that there is 0% probability that the $59 price is better than $39. However, when calculating the profit difference between the two prices, the higher prices results in greater profit even despite lower conversion rates. For instance, the expected profit difference after 10,000 hits is almost $3,000 for the new price.
+The new site with higher price has a lower conversion rate overall.
+![old](./images/old_posteriors.png)
+
+![new](./images/new_posteriors.png)
+
+
+After simulating 800 views, the new site has a lower conversion rate, though the distributions overlap.
+![comp800](./images/comparison_800views.png)
+
+However, simulation of 10,000 views demonstrates 100% probability that the old site will have a higher conversion rate.
+![comp10k](./images/comparison_10kviews.png)
+
+**But wait!**
+
+ This does not mean the company should stick with the old price! When calculating the profit difference between the two prices, the higher prices results in greater profit even despite lower conversion rates. For instance, the expected profit difference after 10,000 hits is almost $3,000 for the new price.
 
 ## Conclusion
 
